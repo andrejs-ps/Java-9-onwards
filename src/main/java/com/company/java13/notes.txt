@@ -1,0 +1,4 @@
+Nothing interesting:
+    - API update to ByteBuffer
+    - Update to localization (support for new chars and emojis)
+    - GC updates

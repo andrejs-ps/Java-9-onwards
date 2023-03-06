@@ -1,0 +1,18 @@
+1) JShell:
+    - A Read-Eval-Print Loop (REPL) tool to execute code snippets
+    - Type "jshell" on the command line. Press Ctrl + D or type "/exit" to exit.
+
+============================================
+C:\>jshell
+|  Welcome to JShell -- Version 17.0.1
+|  For an introduction type: /help intro
+
+jshell> /exit
+|  Goodbye
+============================================
+
+
+2) Modular System:
+        - Allows creating modular JAR files to create more efficient and secure applications.
+        - The JVM could run with only those modules and APIs which are required by the application.
+

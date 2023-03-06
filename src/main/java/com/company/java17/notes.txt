@@ -1,0 +1,20 @@
+https://openjdk.org/jeps/409
+
+A sealed class or interface can be extended or implemented only by those classes and interfaces permitted to do so.
+
+Benefits:
+ 1) help enforce a well-defined and limited set of possible implementations - communicates INTENTION
+ 2) Better security - help prevent unexpected or unauthorized subclassing and behavior from third-party code
+
+Rules:
+1. A sealed class uses "permits" to allow other classes to subclass it.
+2. A child class MUST either be final, sealed or non-sealed. (or code won't compile)
+3. A permitted child class MUST extend the parent sealed class. Permitting without using the permit is now allowed.
+4. The classes specified by permits must be located near the superclass:
+    either in the same module (if the superclass is in a named module) (see Java 9 modularity)
+    or in the same package (if the superclass is in the unnamed module).
+
+More on point 4:
+    The motivation is that a sealed class and its (direct) subclasses are tightly coupled, since they must be compiled and maintained together.
+    In a modular world, this means "same module"; in a non-modular world, the best approximation for this is "same package".
+    If you use modules, you get some additional flexibility, because of the safety boundaries modules give you.

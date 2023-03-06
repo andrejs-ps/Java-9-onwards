@@ -1,0 +1,23 @@
+Other additions:
+
+1) Better code snippets in JavaDoc: https://docs.oracle.com/en/java/javase/18/code-snippet/index.html
+
+
+2) Simple Web Server
+
+https://docs.oracle.com/en/java/javase/19/docs/specs/man/jwebserver.html
+
+Simplest way to get started:
+    1) open the terminal in this package (java18)
+    2) run "java -version" and make sure it is at least java 18
+    3) run the "jwebserver" command
+
+It should output:
+
+Binding to loopback by default. For all interfaces use "-b 0.0.0.0" or "-b ::".
+Serving path/to/your/subdirectory and subdirectories on 127.0.0.1 port 8000
+URL http://127.0.0.1:8000/
+
+The HTML page is now served at: http://127.0.0.1:8000/java18/doc.html
+
+IP address, port and other parameters may be changed
